@@ -784,11 +784,6 @@ export async function GET(request: any, response: NextApiResponse) {
     }
     await connectDB();
     // const users = await userModel.findOne({$and:[{Center_Stone:},{Side_Stone:,Metal_Type:}]}); // Exclude password field
-    return NextResponse.json({
-      message: 'Users Fetched Successfully.',
-      // data: users,
-      status: 200,
-    });
   } catch (error) {
     console.log('error', error);
     return response.status(500).json({ message: 'Internal Server Error' });
