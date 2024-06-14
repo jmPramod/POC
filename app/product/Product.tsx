@@ -19,7 +19,7 @@ const Product = (props: any) => {
       console.log('Fetching products...');
 
       const response = await axios.get(
-        `https://next-poc-1.netlify.app/register?Side_Stone=${sideStone}&Metal_Type=${metalType}&Center_Stone=${centerStone}`
+        `https://next-poc-1.netlify.app/api/register?Side_Stone=${sideStone}&Metal_Type=${metalType}&Center_Stone=${centerStone}`
       );
       router.push(
         `product/?Side_Stone=${sideStone}&Metal_Type=${metalType}&Center_Stone=${centerStone}`
