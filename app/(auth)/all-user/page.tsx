@@ -50,7 +50,7 @@ const AllUser = () => {
             </styles.cardDetails>
           </styles.cardContainer>
           {userList?.map((value: any, index: number) => (
-            <styles.cardContainer>
+            <styles.cardContainer key={index}>
               <styles.cardDetails variant="body1">
                 {value?.first_name}
               </styles.cardDetails>
