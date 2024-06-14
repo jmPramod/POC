@@ -794,32 +794,3 @@ export async function GET(request: any, response: NextApiResponse) {
     return response.status(500).json({ message: 'Internal Server Error' });
   }
 }
-
-export async function DELETE(
-  request: NextApiRequest,
-  response: NextApiResponse
-) {
-  try {
-    console.log(
-      '==============================================',
-      request.query
-    );
-
-    // const  id  = request.query; // Extracting id from query parameters
-    // await connectDB();
-    // const user = await userModel.findByIdAndDelete(id);
-
-    // if (!user) {
-    //   return response.status(404).json({ message: 'User not found' });
-    // }
-
-    // return NextResponse.json({
-    //   message: 'User Deleted Successfully.',
-    //   data: user,
-    //   status: 200,
-    // });
-  } catch (error) {
-    console.log('error', error);
-    return response.status(500).json({ message: 'Internal Server Error' });
-  }
-}

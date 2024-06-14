@@ -32,7 +32,7 @@ const Product = (props: any) => {
 
   const formatDescription = (description: string) => {
     return description?.split('@').map((line, index) => (
-      <li style={{ listStyleType: 'disc' }}>
+      <li style={{ listStyleType: 'disc' }} key={index}>
         <Typography key={index} variant="body1">
           {line}
         </Typography>

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { styles } from './styles';
+import Image from 'next/image';
 const Slider = (props: any) => {
   const { selectedJewelry } = props;
   useEffect(() => {
@@ -18,7 +19,7 @@ const Slider = (props: any) => {
             selectedJewelry === '' ||
             selectedJewelry === 'undefined' ||
             selectedJewelry === null ? (
-              <img src={v} alt="" key={i} />
+              <Image src={v} alt="" key={i} />
             ) : (
               <styles.noImage>No Image </styles.noImage>
             )}
