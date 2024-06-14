@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { styles } from './styles';
 import data from '../../../dataCopy.json';
+import Image from 'next/image';
 const HomePage = () => {
   useEffect(() => {
     console.log('data', data);
@@ -41,14 +42,25 @@ const HomePage = () => {
         <div key={ind} style={{ border: '1px solid black', margin: '10px' }}>
           <h1>{ind}</h1>
           CenterStone_Image:{' '}
-          <img src={val.CenterStone_Image} width={100} height={100} />
+          <Image
+            alt="image"
+            src={val.CenterStone_Image}
+            width={100}
+            height={100}
+          />
           Metal_Image:
-          <img src={val.Metal_Image} width={100} height={100} />
+          <Image alt="image" src={val.Metal_Image} width={100} height={100} />
           SideStone_Image:
-          <img src={val.SideStone_Image} width={100} height={100} />
+          <Image
+            alt="image"
+            src={val.SideStone_Image}
+            width={100}
+            height={100}
+          />
           {val.Main_Image.map((v, i) => (
             <div key={i}>
-              Main_Image{i}:<img src={v} width={100} height={100} />
+              Main_Image{i}:
+              <Image alt="image" src={v} width={100} height={100} />
             </div>
           ))}
         </div>
