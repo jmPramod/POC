@@ -1,0 +1,32 @@
+'use client';
+import React, { useEffect } from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import { styles } from './styles';
+const Slider = (props: any) => {
+  const { selectedJewelry } = props;
+  useEffect(() => {
+    console.log('selectedJewelry?.description', selectedJewelry);
+  }, [selectedJewelry]);
+
+  return (
+    <styles.sliderContainer>
+      <Carousel autoPlay={false} interval={1000} transitionTime={1000}>
+        {selectedJewelry?.Main_Image.map((v: any, i: any) => (
+          <>
+            {selectedJewelry?.description ||
+            selectedJewelry === '' ||
+            selectedJewelry === 'undefined' ||
+            selectedJewelry === null ? (
+              <img src={v} alt="" key={i} />
+            ) : (
+              <styles.noImage>No Image </styles.noImage>
+            )}
+          </>
+        ))}
+      </Carousel>
+    </styles.sliderContainer>
+  );
+};
+
+export default Slider;
