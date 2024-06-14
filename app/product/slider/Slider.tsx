@@ -1,4 +1,7 @@
 'use client';
+{
+  /* eslint-disable-next-line @next/next/no-img-element */
+}
 import React, { useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -19,7 +22,7 @@ const Slider = (props: any) => {
             selectedJewelry === '' ||
             selectedJewelry === 'undefined' ||
             selectedJewelry === null ? (
-              <Image src={v} alt="" key={i} />
+              <img src={v} alt="no image" key={i} />
             ) : (
               <styles.noImage>No Image </styles.noImage>
             )}
