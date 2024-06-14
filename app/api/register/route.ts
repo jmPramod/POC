@@ -773,6 +773,7 @@ export async function GET(request: any, response: NextApiResponse) {
       let Center_Stone = serachParams.get('Center_Stone');
       let Metal_Type = serachParams.get('Metal_Type');
       let Side_Stone = serachParams.get('Side_Stone');
+      await connectDB();
       const data: any = await userModel.findOne({
         $and: [{ Center_Stone }, { Side_Stone }, { Metal_Type }],
       });
@@ -782,8 +783,6 @@ export async function GET(request: any, response: NextApiResponse) {
         status: 200,
       });
     }
-    await connectDB();
-    // const users = await userModel.findOne({$and:[{Center_Stone:},{Side_Stone:,Metal_Type:}]}); // Exclude password field
   } catch (error) {
     console.log('error', error);
     return response.status(500).json({ message: 'Internal Server Error' });
