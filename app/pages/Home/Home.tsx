@@ -16,8 +16,7 @@ const HomePage = () => {
         </styles.title>
         <styles.descriptionWrapper>
           <styles.description variant="h6">
-            This project is a simple Register application.You can do the
-            following
+            This project is a simple Product Page.You can do the following
           </styles.description>
           <div className="flex  ">
             <div>
