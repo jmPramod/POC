@@ -19,14 +19,16 @@ const NavBar = () => {
           alt=""
           onClick={() => router.push('/')}
         />
-        {/* <styles.buttonContainer>
+        <styles.buttonContainer>
           <styles.button variant="contained" size={mobile ? 'small' : 'medium'}>
-            <Link href={'/register'}>Register</Link>
+            <a href="https://next-poc-1.netlify.app/product/product?Side_Stone=Lab+Diamond&Metal_Type=Rose+Gold&Center_Stone=Blue+Sapphire">
+              Product
+            </a>
           </styles.button>
-          <styles.button variant="contained" size={mobile ? 'small' : 'medium'}>
+          {/* <styles.button variant="contained" size={mobile ? 'small' : 'medium'}>
             <Link href={'/all-user'}>All Users</Link>
-          </styles.button>
-        </styles.buttonContainer> */}
+          </styles.button> */}
+        </styles.buttonContainer>
       </styles.toolbar>
     </AppBar>
   );

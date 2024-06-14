@@ -24,21 +24,21 @@ const HomePage = () => {
               <styles.description variant="h6">1.</styles.description>
             </div>
             <styles.description variant="h6">
-              Click on register button and create a user. Once user is created,
-              it redirect to the All user Page
+              Click on THE Product menu in navbar,You will be redirected to the
+              product page.
             </styles.description>
           </div>
-          <div className="flex  ">
+          {/* <div className="flex  ">
             <div>
               <styles.description variant="h6">2.</styles.description>
             </div>
             <styles.description variant="h6">
               Click on all user to view the cerated user
             </styles.description>
-          </div>
+          </div> */}
         </styles.descriptionWrapper>
       </styles.outerContainer>
-      {data.map((val, ind) => (
+      {/* {data.map((val, ind) => (
         <div key={ind} style={{ border: '1px solid black', margin: '10px' }}>
           <h1>{ind}</h1>
           CenterStone_Image:{' '}
@@ -64,7 +64,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      ))}
+      ))} */}
     </>
   );
 };
