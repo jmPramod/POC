@@ -30,14 +30,6 @@ const Product = (props: any) => {
     fetchProduct();
   }, [sideStone, metalType, centerStone, router]);
 
-  const filterJewelry = (productListToFilter = productList) => {};
-
-  useEffect(() => {
-    if (centerStone && metalType && sideStone) {
-      filterJewelry();
-    }
-  }, [centerStone, metalType, sideStone]);
-
   const formatDescription = (description: string) => {
     return description?.split('@').map((line, index) => (
       <li style={{ listStyleType: 'disc' }}>
