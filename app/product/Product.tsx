@@ -28,7 +28,7 @@ const Product = (props: any) => {
       console.log('Fetched product list:', response);
     };
     fetchProduct();
-  }, [sideStone, metalType, centerStone]);
+  }, [sideStone, metalType, centerStone, router]);
 
   const filterJewelry = (productListToFilter = productList) => {};
 
@@ -163,4 +163,3 @@ const Product = (props: any) => {
 };
 
 export default Product;
-
