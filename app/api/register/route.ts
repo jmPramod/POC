@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { connectDB } from '../../../config/connectDB';
 import userModel from '../../../model/authModel';
 import { NextApiRequest, NextApiResponse } from 'next';
-
+export const dynamic = 'force-dynamic';
 // export async function POST(request: NextRequest, response: any) {
 //   try {
 //     const { firstName, lastName, email, phone, password, reEnterPassword } =
