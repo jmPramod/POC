@@ -21,7 +21,7 @@ const NavBar = () => {
         />
         <styles.buttonContainer>
           <styles.button variant="contained" size={mobile ? 'small' : 'medium'}>
-            <a href="https://next-poc-1.netlify.app/product/product?Side_Stone=Lab+Diamond&Metal_Type=Rose+Gold&Center_Stone=Blue+Sapphire">
+            <a href="https://next-poc-1.netlify.app/events/Blue%20Sapphire/Rose%20Gold/Lab%20Diamond">
               Product
             </a>
           </styles.button>
