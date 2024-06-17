@@ -87,7 +87,7 @@ const Product = (props: any) => {
 
   return (
     <>
-      {loading || true ? (
+      {loading ? (
         <styles.skelitonWrapper>
           <styles.skeletonContainer>
             <styles.skeletonLoader />
