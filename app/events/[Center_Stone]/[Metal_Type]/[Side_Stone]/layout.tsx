@@ -1,3 +1,4 @@
+import { fetchproduct } from '@/app/utils';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -12,14 +13,12 @@ export default function RootLayout({
 }
 
 export const generateMetadata = async ({ params }: any) => {
-  const response: any =
-    await `https://next-poc-1.netlify.app/api/events/${params.Center_Stone}/${params.Metal_Type}/${params.Side_Stone}`;
-
+  const response: any = await fetchproduct(params);
   return {
-    title: response.data?.data?.title
-    // description: data?.event_description,
-    // openGraph: {
-    //   images: [data?.event_image],
-    // },
+    title: response.data?.data?.title,
+    description: response.data?.data?.description,
+    openGraph: {
+      images: [response.data?.data?.Main_Image[0]],
+    },
   };
 };
