@@ -4,14 +4,14 @@ export const styles = {
   outerContainer: styled('div')`
     display: flex;
     height: calc(100vh-64px);
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       flex-direction: column;
     }
   `,
 
   sliderContainer: styled('div')`
     width: 50%;
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       width: 100%;
     }
   `,
@@ -22,7 +22,7 @@ export const styles = {
     align-items: start;
     gap: 15px;
     padding: 15px;
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       width: 100%;
     }
   `,
@@ -41,7 +41,7 @@ export const styles = {
   skelitonWrapper: styled('div')`
     display: flex;
     width: 100%;
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       flex-direction: column;
     }
   `,
@@ -49,7 +49,7 @@ export const styles = {
     display: flex;
     width: 50%;
     height: 100vh;
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       height: 40vh;
       width: 100%;
     }
@@ -60,7 +60,7 @@ export const styles = {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    @media (0<width<700px) {
+    @media (0<width<900px) {
       width: 93%;
 
       margin: 0 12px;
