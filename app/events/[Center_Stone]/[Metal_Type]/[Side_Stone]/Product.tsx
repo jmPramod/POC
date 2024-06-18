@@ -272,6 +272,10 @@ const Product = (props: any) => {
                   : 'Description not available for product'
               )}
             </ul>
+
+            <Typography variant="h4" style={{ fontWeight: '500' }}>
+              ${productList?.selling_price}
+            </Typography>
           </styles.infoContainer>
         </styles.outerContainer>
       )}
