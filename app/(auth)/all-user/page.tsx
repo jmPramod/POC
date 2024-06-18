@@ -12,7 +12,9 @@ const AllUser = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const data = await axios.get('http://localhost:3000/api/register');
+        const data = await axios.get(
+          'https://next-poc-1.netlify.app/api/register'
+        );
         console.log(data);
         if (data) {
           setUserList(data?.data?.data);
@@ -26,7 +28,7 @@ const AllUser = () => {
   const handleDelete = async (id: any) => {
     try {
       const res: AxiosResponse<any> = await axios.delete(
-        `http://localhost:3000/api/register/${id}`
+        `https://next-poc-1.netlify.app/api/register/${id}`
       );
       setUserDelete(!userDelete);
     } catch (error) {

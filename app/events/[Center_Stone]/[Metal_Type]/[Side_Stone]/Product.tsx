@@ -74,7 +74,7 @@ const Product = (props: any) => {
   const formatDescription = (description: string) => {
     return description?.split('@').map((line, index) => (
       <li style={{ listStyleType: 'disc' }} key={index}>
-        <Typography key={index} variant="body1">
+        <Typography key={index} variant="body1" style={{ color: '#525252' }}>
           {line}
         </Typography>
       </li>
@@ -173,17 +173,23 @@ const Product = (props: any) => {
           </styles.sliderContainer>
           {/* Information slider */}
           <styles.infoContainer>
-            <styles.title variant="h4">
+            <styles.titleMain>
               {productList?.description
                 ? productList?.title
                 : 'Sorry, no products matched your selection. Please choose a different combination.'}
-            </styles.title>
+            </styles.titleMain>
             <styles.startingAt variant="h5">
               Starting at: $489.00
             </styles.startingAt>
             <styles.titleContainer>
-              <Typography variant="body1">Center Stone :</Typography>
-              <Typography>{centerStone}</Typography>
+              <styles.imageText variant="body1">
+                Center Stone :
+              </styles.imageText>
+              <styles.imageText
+                style={{ fontWeight: 'bold', fontSize: '16px' }}
+              >
+                {centerStone}
+              </styles.imageText>
             </styles.titleContainer>
             <styles.titleContainer>
               <styles.IconImage
@@ -225,7 +231,9 @@ const Product = (props: any) => {
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Metal Type:</Typography>
-              <Typography>{metalType}</Typography>
+              <Typography style={{ fontWeight: 'bold', fontSize: '16px' }}>
+                {metalType}
+              </Typography>
             </styles.titleContainer>
             <styles.titleContainer>
               <styles.IconImage
@@ -249,7 +257,9 @@ const Product = (props: any) => {
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Side Stone:</Typography>
-              <Typography>{sideStone}</Typography>
+              <Typography style={{ fontWeight: 'bold', fontSize: '16px' }}>
+                {sideStone}
+              </Typography>
             </styles.titleContainer>
             <styles.titleContainer>
               <styles.IconImage
@@ -273,7 +283,10 @@ const Product = (props: any) => {
               )}
             </ul>
 
-            <Typography variant="h4" style={{ fontWeight: '500' }}>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: '500', fontSize: '24px' }}
+            >
               ${productList?.selling_price}
             </Typography>
           </styles.infoContainer>

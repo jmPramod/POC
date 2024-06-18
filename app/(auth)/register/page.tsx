@@ -56,7 +56,7 @@ const Register: React.FC = () => {
     try {
       console.log('value', formData);
       const res: AxiosResponse<any> = await axios.post(
-        'http://localhost:3000/api/register',
+        'https://next-poc-1.netlify.app/api/register',
         formData
       );
       if (res.status === 200) {
