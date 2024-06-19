@@ -287,7 +287,11 @@ const Product = (props: any) => {
               variant="h4"
               style={{ fontWeight: '500', fontSize: '24px' }}
             >
-              ${productList?.selling_price}
+              {productList?.description ? (
+                <>${productList?.selling_price}</>
+              ) : (
+                ''
+              )}
             </Typography>
           </styles.infoContainer>
         </styles.outerContainer>

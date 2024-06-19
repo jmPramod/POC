@@ -11,7 +11,14 @@ export const styles = {
   `,
   sliderImage: styled('img')``,
   noImage: styled('div')`
-    border: 1px solid red;
-    height: calc(100vh-64px);
+    border: 1px solid black;
+    display: flex;
+    /* flex-direction: col; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    @media (0px<width<900px) {
+      height: 40vh;
+    }
   `,
 };
