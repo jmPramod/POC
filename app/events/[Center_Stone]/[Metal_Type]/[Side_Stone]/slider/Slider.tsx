@@ -15,20 +15,20 @@ const Slider = (props: any) => {
 
   return (
     <styles.sliderContainer>
-      <Carousel autoPlay={false} interval={1000} transitionTime={1000}>
-        {selectedJewelry?.Main_Image.map((v: any, i: any) => (
-          <>
-            {selectedJewelry?.description ||
-            selectedJewelry === '' ||
-            selectedJewelry === 'undefined' ||
-            selectedJewelry === null ? (
+      {selectedJewelry?.description ||
+      selectedJewelry === '' ||
+      selectedJewelry === 'undefined' ||
+      selectedJewelry === null ? (
+        <Carousel autoPlay={false} interval={1000} transitionTime={1000}>
+          {selectedJewelry?.Main_Image.map((v: any, i: any) => (
+            <>
               <img src={v} alt="no image" key={i} />
-            ) : (
-              <styles.noImage>No Image </styles.noImage>
-            )}
-          </>
-        ))}
-      </Carousel>
+            </>
+          ))}
+        </Carousel>
+      ) : (
+        <styles.noImage>No Image </styles.noImage>
+      )}
     </styles.sliderContainer>
   );
 };
