@@ -35,7 +35,7 @@ export const styles = {
   titleMain: styled('h1')`
     font-size: 25px !important;
     font-weight: 500;
-    font-family: 'Jost', Arial, sans-serif;
+    font-family: 'Jost*', Arial, sans-serif;
     width: 98%;
   `,
 

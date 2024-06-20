@@ -16,13 +16,20 @@ export async function GET(request: any, response: any) {
       let Metal_Type = serachParams.get('Metal_Type');
       let Side_Stone = serachParams.get('Side_Stone');
       await connectDB();
-      const data: any = await userModel.findOne({
+      let data: any = await userModel.findOne({
         $and: [
           { Center_Stone: response.params.Center_Stone },
           { Side_Stone: response.params.Side_Stone },
           { Metal_Type: response.params.Metal_Type },
         ],
       });
+
+      if (data?.description === '') {
+        data = await userModel.findOne({
+          $and: [{ Center_Stone: response.params.Center_Stone }],
+        });
+      }
+
       return NextResponse.json({
         message: 'Users Fetched Successfully.',
         data: data,

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from './slider/Slider';
 import axios from 'axios';
 import { styles } from './styles';
-import { Skeleton, Typography } from '@mui/material';
+import { Skeleton, Tooltip, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
 const Product = (props: any) => {
@@ -192,42 +192,58 @@ const Product = (props: any) => {
               </styles.imageText>
             </styles.titleContainer>
             <styles.titleContainer>
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Blue-Sapphire-A-45x45.png"
-                alt="Blue Sapphire"
-                onClick={() => handleCenterStoneChange('Blue Sapphire')}
-                style={{ border: getBorderStyle(centerStone, 'Blue Sapphire') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Green-Emerald-A-45x45.png"
-                alt="Green Emerald"
-                onClick={() => handleCenterStoneChange('Emerald')}
-                style={{ border: getBorderStyle(centerStone, 'Emerald') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/Morganite-gemstone-45x45.png"
-                alt="Morganite"
-                onClick={() => handleCenterStoneChange('Morganite')}
-                style={{ border: getBorderStyle(centerStone, 'Morganite') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/pink-sapphaire-45x45.png"
-                alt="Pink Sapphire"
-                onClick={() => handleCenterStoneChange('Pink Sapphire')}
-                style={{ border: getBorderStyle(centerStone, 'Pink Sapphire') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Red-Ruby-A-45x45.png"
-                alt="Red Ruby"
-                onClick={() => handleCenterStoneChange('Ruby')}
-                style={{ border: getBorderStyle(centerStone, 'Ruby') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/tanzanite-45x45.png"
-                alt="Tanzanite"
-                onClick={() => handleCenterStoneChange('Tanzanite')}
-                style={{ border: getBorderStyle(centerStone, 'Tanzanite') }}
-              />
+              <Tooltip title="Blue Sapphire">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Blue-Sapphire-A-45x45.png"
+                  alt="Blue Sapphire"
+                  onClick={() => handleCenterStoneChange('Blue Sapphire')}
+                  style={{
+                    border: getBorderStyle(centerStone, 'Blue Sapphire'),
+                  }}
+                />
+              </Tooltip>
+              <Tooltip title="Emerald">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Green-Emerald-A-45x45.png"
+                  alt="Green Emerald"
+                  onClick={() => handleCenterStoneChange('Emerald')}
+                  style={{ border: getBorderStyle(centerStone, 'Emerald') }}
+                />
+              </Tooltip>
+              <Tooltip title="Morganite">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/Morganite-gemstone-45x45.png"
+                  alt="Morganite"
+                  onClick={() => handleCenterStoneChange('Morganite')}
+                  style={{ border: getBorderStyle(centerStone, 'Morganite') }}
+                />
+              </Tooltip>
+              <Tooltip title="Pink Sapphire">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/pink-sapphaire-45x45.png"
+                  alt="Pink Sapphire"
+                  onClick={() => handleCenterStoneChange('Pink Sapphire')}
+                  style={{
+                    border: getBorderStyle(centerStone, 'Pink Sapphire'),
+                  }}
+                />
+              </Tooltip>
+              <Tooltip title="Ruby">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Red-Ruby-A-45x45.png"
+                  alt="Red Ruby"
+                  onClick={() => handleCenterStoneChange('Ruby')}
+                  style={{ border: getBorderStyle(centerStone, 'Ruby') }}
+                />
+              </Tooltip>
+              <Tooltip title="Tanzanite">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/tanzanite-45x45.png"
+                  alt="Tanzanite"
+                  onClick={() => handleCenterStoneChange('Tanzanite')}
+                  style={{ border: getBorderStyle(centerStone, 'Tanzanite') }}
+                />
+              </Tooltip>
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Metal Type:</Typography>
@@ -236,24 +252,30 @@ const Product = (props: any) => {
               </Typography>
             </styles.titleContainer>
             <styles.titleContainer>
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/3-2-45x45.png"
-                alt="Rose Gold"
-                onClick={() => handleMetalTypeChange('Rose Gold')}
-                style={{ border: getBorderStyle(metalType, 'Rose Gold') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/1-2-45x45.png"
-                alt="White Gold"
-                onClick={() => handleMetalTypeChange('White Gold')}
-                style={{ border: getBorderStyle(metalType, 'White Gold') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/2-2-45x45.png"
-                alt="Yellow Gold"
-                onClick={() => handleMetalTypeChange('Yellow Gold')}
-                style={{ border: getBorderStyle(metalType, 'Yellow Gold') }}
-              />
+              <Tooltip title="Rose Gold">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/3-2-45x45.png"
+                  alt="Rose Gold"
+                  onClick={() => handleMetalTypeChange('Rose Gold')}
+                  style={{ border: getBorderStyle(metalType, 'Rose Gold') }}
+                />
+              </Tooltip>
+              <Tooltip title="White Gold">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/1-2-45x45.png"
+                  alt="White Gold"
+                  onClick={() => handleMetalTypeChange('White Gold')}
+                  style={{ border: getBorderStyle(metalType, 'White Gold') }}
+                />
+              </Tooltip>
+              <Tooltip title="Yellow Gold">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/2-2-45x45.png"
+                  alt="Yellow Gold"
+                  onClick={() => handleMetalTypeChange('Yellow Gold')}
+                  style={{ border: getBorderStyle(metalType, 'Yellow Gold') }}
+                />
+              </Tooltip>
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Side Stone:</Typography>
@@ -262,18 +284,22 @@ const Product = (props: any) => {
               </Typography>
             </styles.titleContainer>
             <styles.titleContainer>
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/About1-45x45.png"
-                alt="Lab Diamond"
-                onClick={() => handleSideStoneChange('Lab Diamond')}
-                style={{ border: getBorderStyle(sideStone, 'Lab Diamond') }}
-              />
-              <styles.IconImage
-                src="https://demo.elbasoft.com/Nextjs_POC/images/About-45x45.png"
-                alt="Natural Diamond"
-                onClick={() => handleSideStoneChange('White Diamond')}
-                style={{ border: getBorderStyle(sideStone, 'White Diamond') }}
-              />
+              <Tooltip title="Lab Diamond">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/About1-45x45.png"
+                  alt="Lab Diamond"
+                  onClick={() => handleSideStoneChange('Lab Diamond')}
+                  style={{ border: getBorderStyle(sideStone, 'Lab Diamond') }}
+                />
+              </Tooltip>
+              <Tooltip title="White Diamond">
+                <styles.IconImage
+                  src="https://demo.elbasoft.com/Nextjs_POC/images/About-45x45.png"
+                  alt="Natural Diamond"
+                  onClick={() => handleSideStoneChange('White Diamond')}
+                  style={{ border: getBorderStyle(sideStone, 'White Diamond') }}
+                />
+              </Tooltip>
             </styles.titleContainer>
             <ul style={{ paddingLeft: '10px' }}>
               {formatDescription(
