@@ -24,11 +24,11 @@ export async function GET(request: any, response: any) {
         ],
       });
 
-      if (data?.description === '') {
-        data = await userModel.findOne({
-          $and: [{ Center_Stone: response.params.Center_Stone }],
-        });
-      }
+      // if (data?.description === '') {
+      //   data = await userModel.findOne({
+      //     $and: [{ Center_Stone: response.params.Center_Stone }],
+      //   });
+      // }
 
       return NextResponse.json({
         message: 'Users Fetched Successfully.',

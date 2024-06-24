@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Slider = (props: any) => {
   const { selectedJewelry } = props;
   useEffect(() => {
-    console.log('selectedJewelry?.description', selectedJewelry);
+    // console.log('selectedJewelry?.description', selectedJewelry);
   }, [selectedJewelry]);
 
   return (

@@ -1,0 +1,482 @@
+[
+  {
+    "key": "Blue SapphireRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Blue SapphireWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Blue SapphireYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "EmeraldYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "EmeraldRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "EmeraldWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "MorganiteWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": false
+  },
+  {
+    "key": "MorganiteYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": false
+  },
+  {
+    "key": "MorganiteRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Pink SapphireYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Pink SapphireRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Pink SapphireWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "RubyRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "RubyWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "RubyYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "TanzaniteRose Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "TanzaniteWhite Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "TanzaniteYellow Gold",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldBlue Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldEmerald",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldMorganite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldPink Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldRuby",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Rose GoldTanzanite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Morganite",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldBlue Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldEmerald",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldPink Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldRuby",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldTanzanite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "White GoldMorganite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": false
+  },
+  {
+    "key": "Yellow GoldMorganite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": false
+  },
+  {
+    "key": "Yellow GoldBlue Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Yellow GoldEmerald",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Yellow GoldPink Sapphire",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Yellow GoldRuby",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  },
+  {
+    "key": "Yellow GoldTanzanite",
+    "Center_Stone": [
+      "Blue Sapphire",
+      "Emerald",
+      "Pink Sapphire",
+      "Ruby",
+      "Tanzanite"
+    ],
+    "Metal_Type": ["Rose Gold", "White Gold", "Yellow Gold"],
+    "Side_Stone": ["Lab Diamond", "White Diamond"],
+    "val": true
+  }
+]

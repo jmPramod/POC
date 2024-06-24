@@ -5,19 +5,25 @@ import axios from 'axios';
 import { styles } from './styles';
 import { Skeleton, Tooltip, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
-
+import options1 from '../../../../../options.json';
 const Product = (props: any) => {
+  const { Center_Stone, Metal_Type, Side_Stone } = props.params.params;
   const [productList, setProductList] = useState<any>();
   const [centerStone, setCenterStone] = useState('');
   const [metalType, setMetalType] = useState('');
   const [sideStone, setSideStone] = useState('');
+
+  const [category, setCategory] = useState(
+    decodeURIComponent(Center_Stone) + decodeURIComponent(Metal_Type)
+  );
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
+  const [lastChanged, setLastChanged] = useState('');
+  const [options, setOptions] = useState<any>(null);
   // Fetch URL parameters from props and set initial state
   useEffect(() => {
-    console.log('props', props);
-    const { Center_Stone, Metal_Type, Side_Stone } = props.params.params;
+    // console.log('props', props);
 
     if (Center_Stone && Metal_Type && Side_Stone) {
       setCenterStone(decodeURIComponent(Center_Stone));
@@ -25,23 +31,96 @@ const Product = (props: any) => {
       setSideStone(decodeURIComponent(Side_Stone));
     }
   }, [props.params]);
-
-  // Fetch product list whenever state changes
+  // Combined useEffect for fetching options and products
   useEffect(() => {
-    const fetchProduct = async () => {
-      // setLoading(true);
-      const response = await axios.get(
-        `https://next-poc-1.netlify.app/api/events/${centerStone}/${metalType}/${sideStone}`
-      );
-      setProductList(response.data?.data);
-      setLoading(false);
+    const fetchOptionsAndProduct = async () => {
+      try {
+        // Determine which parameter was changed last
+
+        // Fetch options
+
+        // Check if the selected values exist in the options
+
+        // Fetch product data if the selection is valid
+        if (category && metalType && sideStone) {
+          const option: any = await axios.get(
+            `https://next-poc-1.netlify.app/api/category/${category}`
+          );
+          // const option = options1.find((v) => v.key === category);
+
+          console.log('option', option, category);
+
+          setOptions(option.data?.data);
+          if (option.data?.data?.val) {
+            const response = await axios.get(
+              `https://next-poc-1.netlify.app/api/events/${centerStone}/${metalType}/${sideStone}`
+            );
+            console.log('option true', response.data?.data);
+            setProductList(response.data?.data);
+          } else {
+            console.log('option false');
+          }
+          // setProductList(null); // Clear product list if selection is invalid
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
     };
 
     if (centerStone && metalType && sideStone) {
-      fetchProduct();
+      fetchOptionsAndProduct();
     }
-  }, [centerStone, metalType, sideStone]);
+  }, [centerStone, metalType, sideStone, category]);
+  // Fetch product list whenever state changes
+  // useEffect(() => {
+  //   const fetchProduct = async () => {
+  //     const response = await axios.get(
+  //       `https://next-poc-1.netlify.app/api/events/${centerStone}/${metalType}/${sideStone}`
+  //     );
+  //     setProductList(response.data?.data);
+  //     setLoading(false);
+  //   };
 
+  //   if (centerStone && metalType && sideStone) {
+  //     fetchProduct();
+  //   }
+  // }, [centerStone, metalType, sideStone]);
+  // useEffect(() => {
+  //   const fetchOptions = async () => {
+  //     // const response = await axios.get(
+  //     //   `https://next-poc-1.netlify.app/api/options/${changedValue}`
+  //     // );
+  //     // setOptions(response.data);
+  //     const v = options1.filter((v) => {
+  //       return v.key === centerStone;
+  //     });
+  //     console.log('options1', centerStone);
+
+  //     console.log('v', v);
+
+  //     setOptions(v[0]);
+  //   };
+  //   fetchOptions();
+  // }, [centerStone]);
+  // useEffect(() => {
+  //   const fetchOptions = async () => {
+  //     // const response = await axios.get(
+  //     //   `https://next-poc-1.netlify.app/api/options/${changedValue}`
+  //     // );
+  //     // setOptions(response.data);
+  //     const v = options1.filter((v) => {
+  //       return v.key === metalType;
+  //     });
+  //     console.log('options1', metalType);
+
+  //     console.log('v', v);
+
+  //     setOptions(v[0]);
+  //   };
+  //   fetchOptions();
+  // }, [metalType]);
   const handleChange = (
     newCenterStone: string,
     newMetalType: string,
@@ -191,7 +270,7 @@ const Product = (props: any) => {
                 {centerStone}
               </styles.imageText>
             </styles.titleContainer>
-            <styles.titleContainer>
+            {/* <styles.titleContainer>
               <Tooltip title="Blue Sapphire">
                 <styles.IconImage
                   src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Blue-Sapphire-A-45x45.png"
@@ -244,6 +323,91 @@ const Product = (props: any) => {
                   style={{ border: getBorderStyle(centerStone, 'Tanzanite') }}
                 />
               </Tooltip>
+            </styles.titleContainer> */}
+            <styles.titleContainer>
+              {options?.Center_Stone?.includes('Blue Sapphire') && (
+                <Tooltip title="Blue Sapphire">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Blue-Sapphire-A-45x45.png"
+                    alt="Blue Sapphire"
+                    onClick={() => {
+                      handleCenterStoneChange('Blue Sapphire');
+                      setCategory('Blue Sapphire' + metalType);
+                    }}
+                    style={{
+                      border: getBorderStyle(centerStone, 'Blue Sapphire'),
+                    }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Center_Stone?.includes('Emerald') && (
+                <Tooltip title="Emerald">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Green-Emerald-A-45x45.png"
+                    alt="Green Emerald"
+                    onClick={() => {
+                      handleCenterStoneChange('Emerald');
+                      setCategory('Emerald' + metalType);
+                    }}
+                    style={{ border: getBorderStyle(centerStone, 'Emerald') }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Center_Stone?.includes('Morganite') && (
+                <Tooltip title="Morganite">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/Morganite-gemstone-45x45.png"
+                    alt="Morganite"
+                    onClick={() => {
+                      handleCenterStoneChange('Morganite');
+                      setCategory('Morganite' + metalType);
+                    }}
+                    style={{ border: getBorderStyle(centerStone, 'Morganite') }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Center_Stone?.includes('Pink Sapphire') && (
+                <Tooltip title="Pink Sapphire">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/pink-sapphaire-45x45.png"
+                    alt="Pink Sapphire"
+                    onClick={() => {
+                      handleCenterStoneChange('Pink Sapphire');
+
+                      setCategory('Pink Sapphire' + metalType);
+                    }}
+                    style={{
+                      border: getBorderStyle(centerStone, 'Pink Sapphire'),
+                    }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Center_Stone?.includes('Ruby') && (
+                <Tooltip title="Ruby">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/Variations-Stone-Red-Ruby-A-45x45.png"
+                    alt="Ruby"
+                    onClick={() => {
+                      handleCenterStoneChange('Ruby');
+                      setCategory('Ruby' + metalType);
+                    }}
+                    style={{ border: getBorderStyle(centerStone, 'Ruby') }}
+                  />
+                </Tooltip>
+              )}{' '}
+              {options?.Center_Stone?.includes('Tanzanite') && (
+                <Tooltip title="Tanzanite">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/tanzanite-45x45.png"
+                    alt="Tanzanite"
+                    onClick={() => {
+                      handleCenterStoneChange('Tanzanite');
+                      setCategory('Tanzanite' + metalType);
+                    }}
+                    style={{ border: getBorderStyle(centerStone, 'Tanzanite') }}
+                  />
+                </Tooltip>
+              )}
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Metal Type:</Typography>
@@ -252,30 +416,54 @@ const Product = (props: any) => {
               </Typography>
             </styles.titleContainer>
             <styles.titleContainer>
-              <Tooltip title="Rose Gold">
-                <styles.IconImage
-                  src="https://demo.elbasoft.com/Nextjs_POC/images/3-2-45x45.png"
-                  alt="Rose Gold"
-                  onClick={() => handleMetalTypeChange('Rose Gold')}
-                  style={{ border: getBorderStyle(metalType, 'Rose Gold') }}
-                />
-              </Tooltip>
-              <Tooltip title="White Gold">
-                <styles.IconImage
-                  src="https://demo.elbasoft.com/Nextjs_POC/images/1-2-45x45.png"
-                  alt="White Gold"
-                  onClick={() => handleMetalTypeChange('White Gold')}
-                  style={{ border: getBorderStyle(metalType, 'White Gold') }}
-                />
-              </Tooltip>
-              <Tooltip title="Yellow Gold">
-                <styles.IconImage
-                  src="https://demo.elbasoft.com/Nextjs_POC/images/2-2-45x45.png"
-                  alt="Yellow Gold"
-                  onClick={() => handleMetalTypeChange('Yellow Gold')}
-                  style={{ border: getBorderStyle(metalType, 'Yellow Gold') }}
-                />
-              </Tooltip>
+              {options?.Metal_Type?.includes('Rose Gold') && (
+                <Tooltip title="Rose Gold">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/3-2-45x45.png"
+                    alt="Rose Gold"
+                    onClick={() => {
+                      handleMetalTypeChange('Rose Gold');
+
+                      setCategory('Rose Gold' + centerStone);
+                    }}
+                    style={{
+                      border: getBorderStyle(metalType, 'Rose Gold'),
+                    }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Metal_Type?.includes('White Gold') && (
+                <Tooltip title="White Gold">
+                  <styles.IconImage
+                    src="https://demo.elbasoft.com/Nextjs_POC/images/1-2-45x45.png"
+                    alt="White Gold"
+                    onClick={() => {
+                      handleMetalTypeChange('White Gold');
+
+                      setCategory('White Gold' + centerStone);
+                    }}
+                    style={{
+                      border: getBorderStyle(metalType, 'White Gold'),
+                    }}
+                  />
+                </Tooltip>
+              )}
+              {options?.Metal_Type?.includes('Yellow Gold') && (
+                <Tooltip title="Yellow Gold">
+                  <styles.IconImage
+                    src="	https://demo.elbasoft.com/Nextjs_POC/images/2-2-45x45.png"
+                    alt="Yellow Gold"
+                    onClick={() => {
+                      handleMetalTypeChange('Yellow Gold');
+
+                      setCategory('Yellow Gold' + centerStone);
+                    }}
+                    style={{
+                      border: getBorderStyle(metalType, 'Yellow Gold'),
+                    }}
+                  />
+                </Tooltip>
+              )}
             </styles.titleContainer>
             <styles.titleContainer>
               <Typography variant="body1">Side Stone:</Typography>
@@ -288,7 +476,9 @@ const Product = (props: any) => {
                 <styles.IconImage
                   src="https://demo.elbasoft.com/Nextjs_POC/images/About1-45x45.png"
                   alt="Lab Diamond"
-                  onClick={() => handleSideStoneChange('Lab Diamond')}
+                  onClick={() => {
+                    handleSideStoneChange('Lab Diamond');
+                  }}
                   style={{ border: getBorderStyle(sideStone, 'Lab Diamond') }}
                 />
               </Tooltip>
