@@ -34,6 +34,7 @@ const Product = (props: any) => {
   // Combined useEffect for fetching options and products
   useEffect(() => {
     const fetchOptionsAndProduct = async () => {
+      // setLoading(true);
       try {
         // Determine which parameter was changed last
 
@@ -43,18 +44,25 @@ const Product = (props: any) => {
 
         // Fetch product data if the selection is valid
         if (category && metalType && sideStone) {
+          // setLoading(true);
+
           const option: any = await axios.get(
             `https://next-poc-1.netlify.app/api/category/${category}`
           );
           // const option = options1.find((v) => v.key === category);
+          // setLoading(true);
 
           console.log('option', option, category);
 
           setOptions(option.data?.data);
           if (option.data?.data?.val) {
+            // setLoading(true);
+
             const response = await axios.get(
               `https://next-poc-1.netlify.app/api/events/${centerStone}/${metalType}/${sideStone}`
             );
+            // setLoading(true);
+
             console.log('option true', response.data?.data);
             setProductList(response.data?.data);
           } else {
@@ -62,65 +70,20 @@ const Product = (props: any) => {
           }
           // setProductList(null); // Clear product list if selection is invalid
         }
-        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
-        setLoading(false);
       }
+      setLoading(false);
     };
 
     if (centerStone && metalType && sideStone) {
       fetchOptionsAndProduct();
     }
   }, [centerStone, metalType, sideStone, category]);
-  // Fetch product list whenever state changes
-  // useEffect(() => {
-  //   const fetchProduct = async () => {
-  //     const response = await axios.get(
-  //       `https://next-poc-1.netlify.app/api/events/${centerStone}/${metalType}/${sideStone}`
-  //     );
-  //     setProductList(response.data?.data);
-  //     setLoading(false);
-  //   };
 
-  //   if (centerStone && metalType && sideStone) {
-  //     fetchProduct();
-  //   }
-  // }, [centerStone, metalType, sideStone]);
-  // useEffect(() => {
-  //   const fetchOptions = async () => {
-  //     // const response = await axios.get(
-  //     //   `https://next-poc-1.netlify.app/api/options/${changedValue}`
-  //     // );
-  //     // setOptions(response.data);
-  //     const v = options1.filter((v) => {
-  //       return v.key === centerStone;
-  //     });
-  //     console.log('options1', centerStone);
-
-  //     console.log('v', v);
-
-  //     setOptions(v[0]);
-  //   };
-  //   fetchOptions();
-  // }, [centerStone]);
-  // useEffect(() => {
-  //   const fetchOptions = async () => {
-  //     // const response = await axios.get(
-  //     //   `https://next-poc-1.netlify.app/api/options/${changedValue}`
-  //     // );
-  //     // setOptions(response.data);
-  //     const v = options1.filter((v) => {
-  //       return v.key === metalType;
-  //     });
-  //     console.log('options1', metalType);
-
-  //     console.log('v', v);
-
-  //     setOptions(v[0]);
-  //   };
-  //   fetchOptions();
-  // }, [metalType]);
+  useEffect(() => {
+    console.log('loading', loading);
+  }, []);
   const handleChange = (
     newCenterStone: string,
     newMetalType: string,
