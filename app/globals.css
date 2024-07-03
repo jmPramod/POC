@@ -31,6 +31,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+  font-family: 'Jost', Arial, sans-serif;
 }
 
 @layer utilities {
